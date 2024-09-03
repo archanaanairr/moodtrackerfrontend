@@ -1,38 +1,156 @@
-.App {
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main Container */
+.mood-tracker-container {
+  font-family: 'Arial', sans-serif;
+  max-width: 700px; /* Reduced max-width */
+  margin: 30px auto; /* Reduced margin */
+  padding: 15px; /* Reduced padding */
+  background-color: #ffffff;
+  border-radius: 10px; /* Slightly reduced border-radius */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adjusted shadow for a smaller container */
+  border: 1px solid #e0e0e0;
+}
+
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.header h1 {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+
+/* Mood Slider Container */
+.mood-slider-container {
+  display: flex; /* Use flexbox to center content */
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  margin-bottom: 30px;
+}
+
+.mood-slider {
+  width: 100%; /* Adjust width as needed */
+  max-width: 500px; /* Optional: Set a maximum width */
+  margin: 20px 0;
+  align-items: center; 
+
+}
+
+.mood-description {
+  font-size: 1.3rem;
+  color: #666;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Journal Entry */
+.journal-container {
+  margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.journal-textarea {
+  width: 100%;
+  height: 160px;
+  padding: 15px;
+  font-size: 1.1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f5f5f5;
+  resize: vertical;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Sleep and Water Intake */
+.input-group {
+  margin-bottom: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: #444;
 }
 
-@keyframes App-logo-spin {
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* Charts */
+.chart-container {
+  margin-top: 30px;
+}
+
+/* Recommendations Section */
+.recommendations-container {
+  margin-top: 30px;
+  padding: 25px;
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* Gradient background */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+  border: 2px solid #00bcd4; /* Highlight with a teal border */
+  animation: glow 1.5s ease-in-out infinite alternate; /* Subtle glowing effect */
+}
+
+@keyframes glow {
   from {
-    transform: rotate(0deg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15), 0 0 15px rgba(0, 188, 212, 0.5);
   }
   to {
-    transform: rotate(360deg);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 188, 212, 0.8);
   }
+}
+
+.recommendations-header {
+  font-size: 1.6rem;
+  color: #00796b;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: bold; /* Make header text bold */
+}
+
+.recommendations-content {
+  font-size: 1.2rem;
+  color: #004d40;
+  line-height: 1.7;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #00bcd4;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recommendations-button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #00796b;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 20px;
+}
+
+.recommendations-button:hover {
+  background-color: #004d40;
+  transform: scale(1.05);
 }
